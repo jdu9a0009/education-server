@@ -35,7 +35,7 @@ class VerifyEmailController extends Controller
         Mail::to(auth()->user())->send(new EmailVerification(auth()->user()));
 
         return response()->json([
-            'message' => 'Email verification link sent on your email id check your email'
+            'message' => 'Email verification link sent on your email. Please check your email'
         ]);
     }
 }
